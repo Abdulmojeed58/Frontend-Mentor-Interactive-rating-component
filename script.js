@@ -2,16 +2,16 @@ var container = document.querySelector(".container");
 var containerThankYou = document.querySelector(".container-thank-you");
 var submit = document.querySelector("button");
 var selected = document.querySelector(".selected");
-var four = document.querySelector("#four");
+var button = document.querySelectorAll(".button");
 
-four.addEventListener("click", function() {
+button.forEach(button => button.addEventListener("click", function() {
     submit.addEventListener("click", function() {
         container.classList.add("active");
         containerThankYou.classList.remove("none");
-        selected.appendChild(document.createTextNode("You selected " + four.innerHTML + " out of 5"));
+        selected.appendChild(document.createTextNode("You selected " + button.innerHTML + " out of 5"));
         
     })
-})
+}))
 
 // submit.addEventListener("click", function() {
 //     container.classList.add("active");
