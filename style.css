@@ -165,7 +165,6 @@ button:hover {
 
 @media(max-width: 500px) {
     .all {
-        width: 290px;
         margin: 0 5px;
         height: 340px;
         border-radius: 15px;
