@@ -163,7 +163,7 @@ button:hover {
     color: var(--Medium-Grey);
 }
 
-@media(max-width: 350px) {
+@media(max-width: 500px) {
     .all {
         width: 290px;
         margin: 0 20px;
