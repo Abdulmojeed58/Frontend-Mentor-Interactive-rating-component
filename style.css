@@ -92,7 +92,7 @@
     background-color: var(--Orange);
     color: var(--White);
 }
-.rating p:active {
+.active:active {
     background-color: var(--Light-Grey);
     color: var(--White);
 }
@@ -131,9 +131,9 @@ button:hover {
 .none {
     display: none;
 }
-.active {
+/* .active {
     display: none;
-}
+} */
 .thank-you {
     display: flex;
     justify-content: center;

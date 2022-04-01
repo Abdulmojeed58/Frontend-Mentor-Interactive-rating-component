@@ -3,19 +3,25 @@ var containerThankYou = document.querySelector(".container-thank-you");
 var submit = document.querySelector("button");
 var selected = document.querySelector(".selected");
 var button = document.querySelectorAll(".button");
+const score = document.querySelector(".score");
+let starScore = ""
 
-button.forEach(button => button.addEventListener("click", function() {
-    submit.addEventListener("click", function() {
-        container.classList.add("active");
-        containerThankYou.classList.remove("none");
-        selected.appendChild(document.createTextNode("You selected " + button.innerHTML + " out of 5"));
-        
-    })
-}))
+submit.addEventListener("click", function() {
+    container.classList.add("none");
+    score.textContent = starScore;
+    containerThankYou.classList.remove("none");
+});
 
-// submit.addEventListener("click", function() {
-//     container.classList.add("active");
-//     containerThankYou.classList.remove("none");
-//     selected.appendChild(document.createTextNode("You selected 4 out of 5"));
-    
-// })
+button.forEach(btn => btn.addEventListener("click", 
+function mjay(event) {
+    button.forEach(btn => {
+        btn.classList.remove("active")
+    });
+    if (event.target.classList.contains("button")) {
+        event.target.classList.add("active")
+    } else {
+        event.target.parentElement.classList.add("active")
+    }
+    starScore = event.target.textContent;
+}
+));
