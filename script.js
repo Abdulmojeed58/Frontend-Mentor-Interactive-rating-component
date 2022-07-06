@@ -4,6 +4,7 @@ var submit = document.querySelector("button");
 var selected = document.querySelector(".selected");
 var button = document.querySelectorAll(".button");
 const score = document.querySelector(".score");
+const all = document.querySelector(".all");
 let starScore = ""
 
 submit.addEventListener("click", function() {
@@ -13,7 +14,7 @@ submit.addEventListener("click", function() {
     containerThankYou.classList.remove("none");
 });
 
-const all = document.addEventListener('click',(e)=>{
+all.addEventListener('click',(e)=>{
     if(e.target.classList.contains('button')){
         starScore = e.target.innerHTML
         starScore.innerHTML = starScore
